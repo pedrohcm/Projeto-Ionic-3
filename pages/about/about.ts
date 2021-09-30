@@ -17,13 +17,10 @@ editPic: string = "";
   constructor(public navCtrl: NavController) {
 
   }
-
+  
   ionViewWillEnter() {
 
     this.loadingStats = true;
     this.progress = 0
   }
-
-
-
 }

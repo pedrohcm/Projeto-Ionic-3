@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Pagina de perfil</h2>
+  <p>
+    Aqui ficam as informacoes do perfil
+  </p>
+  <p>
+    Opa <code>pages/</code> uau
+  </p>
+  <button ion-button block light (click)="doRadio()">Show Radio Alert</button>
+<p>
+    Aqui ficam as informacoes do nome
+  </p>
+<p>
+    Aqui ficam as informacoes do endereço
+  </p>
+<p>
+    Aqui ficam as informacoes do telefone
+  </p>
+
+
+<IonList>
+          <IonRadioGroup value={selected} onIonChange={e => setSelected(e.detail.value)}>
+            <IonListHeader>
+              <IonLabel>Name</IonLabel>
+            </IonListHeader>
+
+            <IonItem>
+              <IonLabel>Biff</IonLabel>
+              <IonRadio slot="start" value="biff" />
+            </IonItem>
+
+            <IonItem>
+              <IonLabel>Griff</IonLabel>
+              <IonRadio slot="start" value="griff" />
+            </IonItem>
+
+            <IonItem>
+              <IonLabel>Buford</IonLabel>
+              <IonRadio slot="start" value="buford" />
+            </IonItem>
+          </IonRadioGroup>
+          <IonItemDivider>Your Selection</IonItemDivider>
+          <IonItem>{selected ?? '(none selected'}</IonItem>
+        </IonList>
+
+</ion-content>

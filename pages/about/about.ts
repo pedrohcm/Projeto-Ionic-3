@@ -6,11 +6,21 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'about.html'
 })
 export class AboutPage {
+  
+editPic: string = "";
+
+  progress: number = 0;
+  levelProgress: number;
+  loadingStats: boolean;
+
 
   constructor(public navCtrl: NavController) {
 
   }
+  
+  ionViewWillEnter() {
 
-  //ufcg
-
+    this.loadingStats = true;
+    this.progress = 0
+  }
 }
